@@ -36,13 +36,13 @@
       };
     </script>
   </head>
-  <body class="font-helvetica dark:bg-slate-900 overflow-x-hidden">
+  <body class="font-helvetica dark:bg-slate-900 overflow-x-">
     <header
       x-data="{ open: false }"
-      class="bg-white shadow-md sticky top-0 right-0 left-0 w-screen dark:bg-slate-900"
+      class="container mx-auto bg-white shadow-md sticky top-0 right-0 left-0 w-screen dark:bg-slate-900"
     >
       <div
-        class="container mx-auto flex justify-between items-center py-4 px-6"
+        class="flex justify-between items-center py-4 px-6"
       >
         <div class="text-blue-500 font-bold text-xl">
           <a href="index.html">
@@ -104,7 +104,7 @@
             >
               <a href="#aloqa">ALOQA</a>
             </li>
-            <button
+            <!-- <button
               id="theme-toggle"
               type="button"
               class="text-red-500 bg-gray-200 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
@@ -133,7 +133,7 @@
                   clip-rule="evenodd"
                 ></path>
               </svg>
-            </button>
+            </button> -->
             <a
               href="tel:+998909089477"
               target="_blank"
@@ -151,7 +151,7 @@
         x-transition:leave="transform ease-in duration-300 transition-translate-opacity"
         x-transition:leave-start="translate-y-0 opacity-100"
         x-transition:leave-end="translate-y-10 opacity-0"
-        class="lg:hidden py-4 dark:bg-slate-900"
+        class="lg:hidden py-4 dark:bg-slate-800"
       >
         <ul class="flex flex-col items-start pl-10 gap-3">
           <li
@@ -490,7 +490,7 @@
     <footer
       class="container bg-seriy flex flex-col px-40 pt-10 pb-10 dark:bg-slate-900"
     >
-      <div class="pb-10 flex md:flex-row flex-col items-center">
+      <div class="pb-10 flex md:flex-row flex-col justify-between items-center gap-10">
         <div class="">
           <img src="./images/logo.png" width="150" />
         </div>
