@@ -13,6 +13,10 @@
       tailwind.config = {
         theme: {
           extend: {
+              wiggle: "wiggle 2s ease-in-out",
+              wiggle1: "wiggle1 2s ease-in-out",
+              wiggle2: "wiggle2 2s ease-in-out",
+            },
             colors: {
               och_kok: "#2B6CB0",
               kok: "#062A4D",
@@ -39,7 +43,7 @@
   <body class="font-helvetica dark:bg-slate-900">
     <header
       x-data="{ open: false }"
-      class="container mx-auto w-full bg-white shadow-md sticky top-0 right-0 left-0gi dark:bg-slate-800"
+      class="container mx-auto w-full bg-white shadow-md sticky top-0 right-0 left-0 dark:bg-slate-800 animate-wiggle"
     >
       <div class="flex justify-between items-center py-4 px-6">
         <div class="text-blue-500 font-bold text-xl">
@@ -148,7 +152,7 @@
           </ul>
         </div>
       </div>
-      <div class="flex">
+      <div class="flex dark:bg-slate-700">
         <div
           x-show="open"
           x-transition:enter="transform ease-out ease-in duration-300 transition-translate-opacity"
@@ -157,7 +161,7 @@
           x-transition:leave="transform ease-in duration-300 transition-translate-opacity"
           x-transition:leave-start="translate-y-0 opacity-100"
           x-transition:leave-end="translate-y-10 opacity-0"
-          class="lg:hidden py-4 dark:bg-slate-500"
+          class="lg:hidden py-4"
         >
           <ul class="flex flex-col items-start pl-10 gap-3">
             <li
@@ -178,7 +182,7 @@
             <a
               href="tel:+998909089477"
               target="_blank"
-              class="bg-btn_color text-center dark:bg-gray-500 px-5 py-2 rounded-full hover:shadow-[0_1px_30px_rgb(0,0,0,0.2)] dark:hover:shadow-[0_1px_30px_rgb(9,9,9,9.1)] dark:hover:text-gray-300 duration-500 hover:text-och_kok"
+              class="bg-btn_color text-center dark:text-white dark:bg-gray-500 px-5 py-2 rounded-full hover:shadow-[0_1px_30px_rgb(0,0,0,0.2)] dark:hover:shadow-[0_1px_30px_rgb(9,9,9,9.1)] dark:hover:text-gray-300 duration-500 hover:text-och_kok"
               >+998 90 908 94 77</a
             >
           </ul>
@@ -210,7 +214,12 @@
         </h1>
         <div class="flex flex-wrap justify-center items-center gap-10">
           <div class="w-72">
-            <img src="./images/eshik_oyna.png" alt="" width="400" class="hover:scale-125 transition duration-500 cursor-pointer"/>
+            <img
+              src="./images/eshik_oyna.png"
+              alt=""
+              width="400"
+              class="hover:scale-125 transition duration-500 cursor-pointer"
+            />
 
             <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
               <h1 class="dark:text-white">
@@ -220,7 +229,12 @@
           </div>
 
           <div class="mb-2 w-72 flex flex-col items-center justify-center">
-            <img src="./images/peregorodka.png" alt="" width="400" class="hover:scale-125 transition duration-500 cursor-pointer"/>
+            <img
+              src="./images/peregorodka.png"
+              alt=""
+              width="400"
+              class="hover:scale-125 transition duration-500 cursor-pointer"
+            />
 
             <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
               <h1 class="dark:text-white">Qalin shishalik peregorodkalar</h1>
@@ -228,7 +242,12 @@
           </div>
 
           <div class="w-72 flex flex-col items-center justify-center">
-            <img src="./images/podokolni.png" alt="" width="400" class="hover:scale-125 transition duration-500 cursor-pointer"/>
+            <img
+              src="./images/podokolni.png"
+              alt=""
+              width="400"
+              class="hover:scale-125 transition duration-500 cursor-pointer"
+            />
 
             <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
               <h1 class="dark:text-white">Podokonniklar</h1>
@@ -236,7 +255,11 @@
           </div>
 
           <div class="w-72 flex flex-col items-center justify-center">
-            <img src="./images/setka.png" width="420" class="hover:scale-125 transition duration-500 cursor-pointer"/>
+            <img
+              src="./images/setka.png"
+              width="420"
+              class="hover:scale-125 transition duration-500 cursor-pointer"
+            />
 
             <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
               <h1 class="dark:text-white">Moskitniy setkalar</h1>
@@ -314,11 +337,11 @@
       </section>
 
       <section
-        class="flex justify-between items-center gap-40 pt-20 min-w-[400px] xl:max-w-[3000px]"
+        class="flex justify-between items-center gap-40 pt-20 max-w-[900px]"
       >
-        <div class="flex flex-col items-center gap-10">
+        <div class="flex flex-col items-center gap-10 max-w-[600px]">
           <p
-            class="font-semibold text-[20px] text-kok text-center dark:text-white"
+            class="font-semibold text-[20px] text-kok text-center dark:text-white max-w-[600px]"
           >
             Bizning korxonada turli hil o'lchamdagi eshik va oynalar ishlab
             chiqariladi. Undan tashqari, hozirgi zamonaviy ofislar uchun
@@ -340,7 +363,7 @@
       </section>
 
       <section
-        class="flex justify-between items-center gap-40 pt-20 pb-20 min-w-[400px] xl:max-w-[3000px]"
+        class="flex justify-between items-center gap-40 pt-20 pb-20 max-w-[900px]"
       >
         <div class="xl:inline hidden">
           <img src="./images/2.png" class="rounded-2xl" />
@@ -348,7 +371,7 @@
 
         <div class="flex flex-col items-center gap-10">
           <p
-            class="font-semibold text-[20px] text-kok text-center max-w-[430px] dark:text-white"
+            class="font-semibold text-[20px] text-kok text-center max-w-[600px] dark:text-white"
           >
             Bizning korxona o'z zimmasiga yuklatilgan vazifalarni belgilangan
             muddatlarda tez va sifatli bajarib berilishi, romlar uchun eng
@@ -444,7 +467,7 @@
           <p class="text-kok w-80 dark:text-white">
             Manzilimizga soat 09:00 dan 19:00 gacha tashrif buyurishingiz mumkin
           </p>
-          <p class="text-och_kok w-96 dark:text-white">
+          <p class="text-och_kok max-w-96 dark:text-white">
             Toshkent shahar, Mirzo Ulug'bek tumani, Alisherobod MFY, Nurli zamin
             ko'chasi, 83 - A
           </p>
@@ -465,7 +488,7 @@
     </main>
 
     <footer
-      class="container bg-seriy flex flex-col px-40 pt-10 pb-10 dark:bg-slate-900"
+      class="container bg-seriy flex flex-col px-6 pt-10 pb-10 dark:bg-slate-900"
     >
       <div
         class="pb-10 flex md:flex-row flex-col justify-between items-center gap-10"
@@ -474,7 +497,7 @@
           <img src="./images/logo.png" width="150" />
         </div>
 
-        <div class="w-96 text-center">
+        <div class="max-w-96 text-center">
           <a
             href="index.html"
             class="hover:text-och_kok text-toq_kok w-5 text-center dark:text-white"
@@ -487,13 +510,13 @@
           <a
             href="tel:+998 90 908 94 77"
             target="_blank"
-            class="hover:text-och_kok text-toq_kok dark:text-white"
+            class="hover:text-och_kok text-toq_kok dark:text-white flex-row"
             >+998 90 908 94 77</a
           >
           <a
             href="tel:+998 94 666 69 88"
             target="_blank"
-            class="hover:text-och_kok text-toq_kok dark:text-white"
+            class="hover:text-och_kok text-toq_kok dark:text-white flex-row"
             >+998 94 666 69 88</a
           >
         </div>
