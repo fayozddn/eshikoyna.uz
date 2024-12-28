@@ -17,7 +17,6 @@
               och_kok: "#2B6CB0",
               kok: "#062A4D",
               toq_kok: "#212353",
-              seriy: "#f2f0f0",
               btn_color: "#F5F5F5",
             },
 
@@ -31,15 +30,14 @@
           fontFamily: {
             helvetica: ["Helvetica", "Arial", "sans-serif"],
           },
-          darkMode: "class",
         },
       };
     </script>
   </head>
-  <body class="font-helvetica dark:bg-slate-900">
+  <body class="font-helvetica">
     <header
       x-data="{ open: false }"
-      class="container mx-auto w-full bg-white shadow-md sticky top-0 right-0 left-0 dark:bg-slate-800 animate-wiggle"
+      class="container mx-auto w-full bg-white shadow-md sticky top-0 right-0 left-0 animate-wiggle"
     >
       <div class="flex justify-between items-center py-4 px-6">
         <div class="text-blue-500 font-bold text-xl">
@@ -51,40 +49,9 @@
             />
           </a>
         </div>
-        <div class="flex gap-10">
-          <button
-            id="theme-toggle"
-            type="button"
-            class="lg:hidden flex text-red-500 bg-gray-200 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5"
-          >
-            <svg
-              id="theme-toggle-dark-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
-              ></path>
-            </svg>
-            <svg
-              id="theme-toggle-light-icon"
-              class="w-5 h-5 hidden"
-              fill="currentColor"
-              viewBox="0 0 20 20"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-              ></path>
-            </svg>
-          </button>
           <button
             @click="open = !open"
-            class="lg:hidden text-kok dark:text-white"
+            class="lg:hidden text-kok"
           >
             <div class="w-6 h-6 relative">
               <svg
@@ -124,31 +91,31 @@
         <div class="hidden lg:flex">
           <ul class="lg:flex lg:items-center space-x-4">
             <li
-              class="hover:underline underline-offset-[25px] hover:text-och_kok duration-300 hover:cursor-pointer text-kok dark:text-white"
+              class="hover:underline underline-offset-[25px] hover:text-och_kok duration-300 hover:cursor-pointer text-kok"
             >
               <a href="index.html">BOH SAHIFA</a>
             </li>
             <li
-              class="hover:underline underline-offset-[25px] hover:text-och_kok duration-300 hover:cursor-pointer text-kok dark:text-white"
+              class="hover:underline underline-offset-[25px] hover:text-och_kok duration-300 hover:cursor-pointer text-kok"
             >
               <a href="#mahsulotlar">MAHSULOTLAR</a>
             </li>
             <li
-              class="hover:underline underline-offset-[25px] hover:text-och_kok duration-300 hover:cursor-pointer text-kok dark:text-white"
+              class="hover:underline underline-offset-[25px] hover:text-och_kok duration-300 hover:cursor-pointer text-kok"
             >
               <a href="#aloqa">ALOQA</a>
             </li>
             <a
               href="tel:+998909089477"
               target="_blank"
-              class="bg-btn_color text-kok dark:bg-gray-500 px-5 py-2 rounded-full hover:shadow-[0_1px_30px_rgb(0,0,0,0.2)] dark:hover:shadow-[0_1px_30px_rgb(9,9,9,9.1)] dark:hover:text-gray-300 dark:text-white duration-500 hover:text-och_kok"
+              class="bg-btn_color text-kok px-5 py-2 rounded-full hover:shadow-[0_1px_30px_rgb(0,0,0,0.2)] duration-500 hover:text-och_kok"
             >
               +998 90 908 94 77
             </a>
           </ul>
         </div>
       </div>
-      <div class="flex dark:bg-slate-700">
+      <div class="flex">
         <div
           x-show="open"
           x-transition:enter="transform ease-out ease-in duration-300 transition-translate-opacity"
@@ -161,24 +128,24 @@
         >
           <ul class="flex flex-col items-start pl-10 gap-3">
             <li
-              class="hover:underline hover:text-och_kok duration-300 hover:cursor-pointer text-kok dark:text-white"
+              class="hover:underline hover:text-och_kok duration-300 hover:cursor-pointer text-kok"
             >
               <a href="index.html">BOH SAHIFA</a>
             </li>
             <li
-              class="hover:underline hover:text-och_kok duration-300 hover:cursor-pointer text-kok dark:text-white"
+              class="hover:underline hover:text-och_kok duration-300 hover:cursor-pointer text-kok"
             >
               <a href="#mahsulotlar">MAHSULOTLAR</a>
             </li>
             <li
-              class="hover:underline hover:text-och_kok duration-300 hover:cursor-pointer text-kok dark:text-white"
+              class="hover:underline hover:text-och_kok duration-300 hover:cursor-pointer text-kok"
             >
               <a href="#aloqa">ALOQA</a>
             </li>
             <a
               href="tel:+998909089477"
               target="_blank"
-              class="bg-btn_color text-center dark:text-white dark:bg-gray-500 px-5 py-2 rounded-full hover:shadow-[0_1px_30px_rgb(0,0,0,0.2)] dark:hover:shadow-[0_1px_30px_rgb(9,9,9,9.1)] dark:hover:text-gray-300 duration-500 hover:text-och_kok"
+              class="bg-btn_color text-center px-5 py-2 rounded-full hover:shadow-[0_1px_30px_rgb(0,0,0,0.2)] duration-500 hover:text-och_kok"
               >+998 90 908 94 77</a
             >
           </ul>
@@ -186,9 +153,9 @@
       </div>
     </header>
     <main
-      class="container lg:px-6 even:bg-seriy dark:bg-slate-900 flex flex-col items-center"
+      class="container lg:px-6 even:bg-seriy flex flex-col items-center"
     >
-      <section class="xl:flex hidden justify-center pb-3 dark:bg-slate-900">
+      <section class="xl:flex hidden justify-center pb-3">
         <div
           class="bg-hero_img bg-cover flex justify-center items-end w-[1400px] h-[540px] pb-10 bg-no-repeat"
         >
@@ -203,9 +170,9 @@
 
       <section
         id="mahsulotlar"
-        class="text-kok text-2xl px-4 flex flex-col items-center font-semibold dark:bg-slate-900"
+        class="text-kok text-2xl px-4 flex flex-col items-center font-semibold"
       >
-        <h1 class="flex justify-center dark:text-white pt-20 pb-20 text-3xl">
+        <h1 class="flex justify-center pt-20 pb-20 text-3xl">
           Bizning mahsulotlar
         </h1>
         <div class="flex flex-wrap justify-center items-center gap-10">
@@ -217,8 +184,8 @@
               class="hover:scale-125 transition duration-500 cursor-pointer"
             />
 
-            <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
-              <h1 class="dark:text-white">
+            <div class="bg-seriy py-2 px-3">
+              <h1>
                 PVH yoki alyumindan eshik va oynalar
               </h1>
             </div>
@@ -232,8 +199,8 @@
               class="hover:scale-125 transition duration-500 cursor-pointer"
             />
 
-            <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
-              <h1 class="dark:text-white">Qalin shishalik peregorodkalar</h1>
+            <div class="bg-seriy py-2 px-3">
+              <h1>Qalin shishalik peregorodkalar</h1>
             </div>
           </div>
 
@@ -245,8 +212,8 @@
               class="hover:scale-125 transition duration-500 cursor-pointer"
             />
 
-            <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
-              <h1 class="dark:text-white">Podokonniklar</h1>
+            <div class="bg-seriy py-2 px-3">
+              <h1>Podokonniklar</h1>
             </div>
           </div>
 
@@ -257,15 +224,15 @@
               class="hover:scale-125 transition duration-500 cursor-pointer"
             />
 
-            <div class="bg-seriy dark:bg-slate-900 py-2 px-3">
-              <h1 class="dark:text-white">Moskitniy setkalar</h1>
+            <div class="bg-seriy py-2 px-3">
+              <h1>Moskitniy setkalar</h1>
             </div>
           </div>
         </div>
       </section>
 
       <section
-        class="text-kok flex justify-center items-center w-full dark:bg-slate-900 gap-[350px] dark:text-white pt-10 pb-10"
+        class="text-kok flex justify-center items-center w-full gap-[350px] pt-10 pb-10"
       >
         <div class="flex flex-col items-center justify-center gap-10">
           <h1 class="text-[30px] font-semibold">Biz haqimizda</h1>
@@ -290,7 +257,7 @@
 
       <section class="w-full">
         <h1
-          class="flex justify-center text-center text-kok text-[30px] pt-10 font-semibold dark:text-white"
+          class="flex justify-center text-center text-kok text-[30px] pt-10 font-semibold"
         >
           Nega bizni tanlashingiz kerak?
         </h1>
@@ -298,8 +265,8 @@
         <div class="flex flex-wrap justify-center items-center gap-10 pt-10">
           <div class="flex flex-col gap-4 items-center w-64 text-center">
             <img src="./images/tajriba.png" width="80" />
-            <h1 class="text-kok dark:text-white">Tajriba</h1>
-            <p class="text-och_kok dark:text-white">
+            <h1 class="text-kok>Tajriba</h1>
+            <p class="text-och_kok>
               Xizmatlar katta tajribaga ega bo'lgan mutaxassislar tomonidan
               bajariladi
             </p>
@@ -307,24 +274,24 @@
 
           <div class="flex flex-col gap-4 items-center w-64 text-center">
             <img src="./images/individual yondashuv.png" width="80" />
-            <h1 class="text-kok dark:text-white">Individual Yondashuv</h1>
-            <p class="text-och_kok dark:text-white">
+            <h1 class="text-kok">Individual Yondashuv</h1>
+            <p class="text-och_kok">
               Har bir mijozga individual ravishda yondashuv
             </p>
           </div>
 
           <div class="flex flex-col gap-4 items-center w-64 text-center">
             <img src="./images/tezkorlik.png" width="80" />
-            <h1 class="text-kok dark:text-white">Tezkorlik</h1>
-            <p class="text-och_kok dark:text-white">
+            <h1 class="text-kok">Tezkorlik</h1>
+            <p class="text-och_kok">
               Kelishilgan muddatlardan kechiktirmay ishlar yakunlanadi
             </p>
           </div>
 
           <div class="flex flex-col gap-4 items-center w-64 text-center">
             <img src="./images/nazorat.png" width="80" />
-            <h1 class="text-kok dark:text-white">Nazorat</h1>
-            <p class="text-och_kok dark:text-white">
+            <h1 class="text-kok">Nazorat</h1>
+            <p class="text-och_kok">
               Yasashdan o'rnatilgunga qadar sifatli amalga oshirilishi nazorat
               qilinadi va ta'minlanadi
             </p>
@@ -337,7 +304,7 @@
       >
         <div class="flex flex-col items-center gap-10 max-w-[600px]">
           <p
-            class="font-semibold text-[20px] text-kok text-center dark:text-white max-w-[600px]"
+            class="font-semibold text-[20px] text-kok text-center max-w-[600px]"
           >
             Bizning korxonada turli hil o'lchamdagi eshik va oynalar ishlab
             chiqariladi. Undan tashqari, hozirgi zamonaviy ofislar uchun
@@ -367,7 +334,7 @@
 
         <div class="flex flex-col items-center gap-10">
           <p
-            class="font-semibold text-[20px] text-kok text-center max-w-[600px] dark:text-white"
+            class="font-semibold text-[20px] text-kok text-center max-w-[600px]"
           >
             Bizning korxona o'z zimmasiga yuklatilgan vazifalarni belgilangan
             muddatlarda tez va sifatli bajarib berilishi, romlar uchun eng
@@ -387,7 +354,7 @@
       <section id="aloqa" class="flex justify-center flex-wrap gap-20 pb-10">
         <div class="flex flex-col items-center text-center gap-4">
           <svg
-            class="fill-toq_kok w-20 dark:fill-white"
+            class="fill-toq_kok w-20"
             aria-hidden="true"
             class="e-font-icon-svg e-fas-envelope"
             viewBox="0 0 512 512"
@@ -397,17 +364,17 @@
               d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
             ></path>
           </svg>
-          <h1 class="text-toq_kok font-semibold text-[24px] dark:text-white">
+          <h1 class="text-toq_kok font-semibold text-[24px]">
             Elektron Pochta
           </h1>
-          <p class="text-kok w-80 dark:text-white">
+          <p class="text-kok w-80">
             Barcha o'zingizni qiziqtirgan savollaringizni pochta manzilimizga
             jo'natishingiz mumkin
           </p>
           <a
             href="https://juraev.shuhrat1988@gmail.com"
             target="_blank"
-            class="text-och_kok hover:text-blue-800 dark:text-white dark:hover:underline"
+            class="text-och_kok hover:text-blue-800"
           >
             juraev.shuhrat1988@gmail.com
           </a>
@@ -415,7 +382,7 @@
 
         <div class="flex flex-col items-center text-center gap-4">
           <svg
-            class="fill-toq_kok w-14 dark:fill-white"
+            class="fill-toq_kok w-14"
             aria-hidden="true"
             class="e-font-icon-svg e-fas-phone-volume"
             viewBox="0 0 384 512"
@@ -425,29 +392,29 @@
               d="M97.333 506.966c-129.874-129.874-129.681-340.252 0-469.933 5.698-5.698 14.527-6.632 21.263-2.422l64.817 40.513a17.187 17.187 0 0 1 6.849 20.958l-32.408 81.021a17.188 17.188 0 0 1-17.669 10.719l-55.81-5.58c-21.051 58.261-20.612 122.471 0 179.515l55.811-5.581a17.188 17.188 0 0 1 17.669 10.719l32.408 81.022a17.188 17.188 0 0 1-6.849 20.958l-64.817 40.513a17.19 17.19 0 0 1-21.264-2.422zM247.126 95.473c11.832 20.047 11.832 45.008 0 65.055-3.95 6.693-13.108 7.959-18.718 2.581l-5.975-5.726c-3.911-3.748-4.793-9.622-2.261-14.41a32.063 32.063 0 0 0 0-29.945c-2.533-4.788-1.65-10.662 2.261-14.41l5.975-5.726c5.61-5.378 14.768-4.112 18.718 2.581zm91.787-91.187c60.14 71.604 60.092 175.882 0 247.428-4.474 5.327-12.53 5.746-17.552.933l-5.798-5.557c-4.56-4.371-4.977-11.529-.93-16.379 49.687-59.538 49.646-145.933 0-205.422-4.047-4.85-3.631-12.008.93-16.379l5.798-5.557c5.022-4.813 13.078-4.394 17.552.933zm-45.972 44.941c36.05 46.322 36.108 111.149 0 157.546-4.39 5.641-12.697 6.251-17.856 1.304l-5.818-5.579c-4.4-4.219-4.998-11.095-1.285-15.931 26.536-34.564 26.534-82.572 0-117.134-3.713-4.836-3.115-11.711 1.285-15.931l5.818-5.579c5.159-4.947 13.466-4.337 17.856 1.304z"
             ></path>
           </svg>
-          <h1 class="text-toq_kok font-semibold text-[24px] dark:text-white">
+          <h1 class="text-toq_kok font-semibold text-[24px]">
             Telefon
           </h1>
-          <p class="text-kok w-80 dark:text-white">
+          <p class="text-kok w-80">
             Buyurtma uchun quyidagi nomerlarimizga aloqaga chiqishingiz mumkin
           </p>
           <a
             href="tel:+998 90 908 94 77"
             target="_blank"
-            class="text-och_kok hover:text-blue-800 dark:text-white dark:hover:underline"
+            class="text-och_kok hover:text-blue-800"
             >+998 90 908 94 77</a
           >
           <a
             href="tel:+998 94 666 69 88"
             target="_blank"
-            class="text-och_kok hover:text-blue-800 dark:text-white dark:hover:underline"
+            class="text-och_kok hover:text-blue-800"
             >+998 94 666 69 88</a
           >
         </div>
 
         <div class="flex flex-col items-center text-center gap-4">
           <svg
-            class="fill-toq_kok w-20 dark:fill-white"
+            class="fill-toq_kok w-20"
             aria-hidden="true"
             class="e-font-icon-svg e-fas-map-marker-alt"
             viewBox="0 0 384 512"
@@ -457,13 +424,13 @@
               d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"
             ></path>
           </svg>
-          <h1 class="text-toq_kok font-semibold text-[24px] dark:text-white">
+          <h1 class="text-toq_kok font-semibold text-[24px]">
             Bizning Manzil
           </h1>
-          <p class="text-kok w-80 dark:text-white">
+          <p class="text-kok w-80">
             Manzilimizga soat 09:00 dan 19:00 gacha tashrif buyurishingiz mumkin
           </p>
-          <p class="text-och_kok max-w-96 dark:text-white">
+          <p class="text-och_kok max-w-96">
             Toshkent shahar, Mirzo Ulug'bek tumani, Alisherobod MFY, Nurli zamin
             ko'chasi, 83 - A
           </p>
@@ -484,7 +451,7 @@
     </main>
 
     <footer
-      class="container bg-seriy flex flex-col px-6 pt-10 pb-10 dark:bg-slate-900"
+      class="container bg-seriy flex flex-col px-6 pt-10 pb-10"
     >
       <div
         class="pb-10 flex md:flex-row flex-col justify-between items-center gap-10"
@@ -496,7 +463,7 @@
         <div class="max-w-96 text-center">
           <a
             href="index.html"
-            class="hover:text-och_kok text-toq_kok w-5 text-center dark:text-white"
+            class="hover:text-och_kok text-toq_kok w-5 text-center"
             >г.Ташкент, Мирзо-Улугбекский район, Алишерабадский МФУ, улица Нурли
             замина, 83-A
           </a>
@@ -506,20 +473,20 @@
           <a
             href="tel:+998 90 908 94 77"
             target="_blank"
-            class="hover:text-och_kok text-toq_kok dark:text-white flex-row"
+            class="hover:text-och_kok text-toq_kok flex-row"
             >+998 90 908 94 77</a
           >
           <a
             href="tel:+998 94 666 69 88"
             target="_blank"
-            class="hover:text-och_kok text-toq_kok dark:text-white flex-row"
+            class="hover:text-och_kok text-toq_kok flex-row"
             >+998 94 666 69 88</a
           >
         </div>
       </div>
-      <span class="flex justify-center text-[13px] dark:text-white"
+      <span class="flex justify-center text-[13px]"
         >© 2024 Eshikoyna.Uz | Powered By<a
-          class="text-kok underline dark:text-white"
+          class="text-kok underline"
           href="https://t.me/from_developer/"
         >
           Taskin Agency</a
